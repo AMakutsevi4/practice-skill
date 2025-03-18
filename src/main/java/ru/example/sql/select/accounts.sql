@@ -11,11 +11,13 @@ VALUES (1, 'Petr Arsentev', 'parsentev', '1234');
 INSERT INTO accounts
 VALUES (2, 'Andrey Hincu', 'anincu', '4321');
 INSERT INTO accounts
-VALUES (3, 'Rail Shamsemuhametov', 'rsham', '5678');
+VALUES (3, 'Lana Sergeeva', 'lserg', '2156');
 INSERT INTO accounts
-VALUES (4, 'Elena Kartashova', 'ekart', '8765');
+VALUES (4, 'Petr Arsentev', 'arsentev_p', '1234');
 INSERT INTO accounts
-VALUES (5, 'Lana Sergeeva', 'lserg', '2156');
+VALUES (5, 'Andrey Hincu', 'nincu_a', '4321');
+INSERT INTO accounts
+VALUES (6, 'Lana Sergeeva', 'serg_l', '2156');
 
 
 SELECT *
@@ -34,3 +36,18 @@ FROM accounts;
 SELECT *
 FROM accounts
 ORDER BY name;
+
+/* Предложение DISTINCT используется для удаления дубликатов из набора результатов выборки.
+   Предложение DISTINCT можно использовать только с операторами SELECT*/
+SELECT DISTINCT name
+FROM accounts;
+
+/*Для того чтобы в выборку попали данные из нескольких столбцов,
+  при этом уникальность учитывалась только лишь в части из них - используется предложение DISTINCT*/
+SELECT DISTINCT (name), login, password
+FROM accounts;
+
+/*Функция COUNT(*) вернет количество строк, возвращенных SELECT-ом, включая null и дубликаты.
+  Если ее использовать на большом объеме данных, то запрос будет медленным.*/
+SELECT COUNT(*)
+FROM accounts;

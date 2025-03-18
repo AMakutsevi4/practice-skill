@@ -9,13 +9,21 @@ CREATE TABLE products
 INSERT INTO products
 VALUES (1, 'bread', 50, 10);
 INSERT INTO products
-VALUES (2, 'cheese', 250, 8);
+VALUES (2, 'milk', 75, 15);
 INSERT INTO products
-VALUES (3, 'milk', 75, 15);
+VALUES (3, 'sugar', 105, 30);
 INSERT INTO products
-VALUES (4, 'butter', 115, 7);
+VALUES (4, 'bread', 50, 10);
 INSERT INTO products
-VALUES (5, 'sugar', 105, 30);
+VALUES (5, 'milk', 68, 15);
+INSERT INTO products
+VALUES (6, 'sugar', 105, 30);
+INSERT INTO products
+VALUES (7, 'bread', 45, 10);
+INSERT INTO products
+VALUES (8, 'milk', 75, 15);
+INSERT INTO products
+VALUES (9, 'sugar', 105, 30);
 
 
 SELECT *
@@ -26,3 +34,15 @@ FROM products;
 
 SELECT name AS product_name, count AS actual_count
 FROM products;
+
+SELECT *
+FROM products
+ORDER BY price DESC;
+
+SELECT DISTINCT name, price
+FROM products
+ORDER BY price DESC;
+
+SELECT DISTINCT name, price, count
+FROM products
+ORDER BY name, price, count;
