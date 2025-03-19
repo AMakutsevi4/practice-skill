@@ -9,21 +9,23 @@ CREATE TABLE products
 INSERT INTO products
 VALUES (1, 'bread', 50, 10);
 INSERT INTO products
-VALUES (2, 'milk', 75, 15);
+VALUES (2, 'cheese', 250, 8);
 INSERT INTO products
-VALUES (3, 'sugar', 105, 30);
+VALUES (3, 'milk', 75, 15);
 INSERT INTO products
-VALUES (4, 'bread', 50, 10);
+VALUES (4, 'butter', 115, 7);
 INSERT INTO products
-VALUES (5, 'milk', 68, 15);
+VALUES (5, 'bread', 50, 10);
 INSERT INTO products
-VALUES (6, 'sugar', 105, 30);
+VALUES (6, 'cheese', 250, 8);
 INSERT INTO products
-VALUES (7, 'bread', 45, 10);
+VALUES (7, 'milk', 75, 15);
 INSERT INTO products
-VALUES (8, 'milk', 75, 15);
+VALUES (8, 'bread', 50, 10);
 INSERT INTO products
-VALUES (9, 'sugar', 105, 30);
+VALUES (9, 'cheese', 250, 8);
+INSERT INTO products
+VALUES (10, 'bread', 50, 10);
 
 
 SELECT *
@@ -46,3 +48,9 @@ ORDER BY price DESC;
 SELECT DISTINCT name, price, count
 FROM products
 ORDER BY name, price, count;
+
+/*В такой форме COUNT(DISTINCT имя_столбца)
+  возвращает количество уникальных ненулевых значений в столбце, который мы указываем в COUNT.
+  Простыми словами, в данном запросе он указывает количество уникальных имён*/
+SELECT COUNT(DISTINCT name)
+FROM products;
