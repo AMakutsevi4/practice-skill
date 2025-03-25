@@ -1,4 +1,4 @@
-package ru.example.sql.stream;
+package ru.example.stream;
 
 
 public record Employee(int age, String name) {

@@ -1,4 +1,4 @@
-package ru.example.sql.stream;
+package ru.example.stream;
 
 import java.util.List;
 import java.util.Map;
