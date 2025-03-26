@@ -41,3 +41,20 @@ AND t.amount < 150;
 SELECT *
 FROM transactions t
 WHERE t.purpose = 'Credit' OR t.amount > 170;
+
+/*При этом иногда необходимо сделать выборку строк чтобы при проверке условия значение в столбце находилось в каком-то диапазоне значений.
+  В этом случае нам поможет оператор BETWEEN. Синтаксис будет иметь следующий вид:
+  SELECT имена_столбцов_через_запятую FROM название_таблицы WHERE столбец_для_проверки BETWEEN значение_1 AND значение_2;*/
+
+  SELECT *
+  FROM transactions t
+  WHERE t.amount BETWEEN 100 AND 200;
+
+SELECT *
+FROM transactions t
+WHERE t.amount NOT BETWEEN 100 AND 200;
+
+SELECT *
+FROM transactions t
+WHERE t.amount BETWEEN 80 AND 190 AND t.payment_date NOT BETWEEN '2022-02-01 12:00:00' AND '2022-08-01 12:00:00';
+
