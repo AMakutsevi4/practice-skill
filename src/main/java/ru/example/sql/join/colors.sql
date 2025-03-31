@@ -27,3 +27,11 @@ INNER JOIN colors c on c.id = a.color_id;
   SELECT id, name, number, description
   FROM colors c
   LEFT JOIN actions a ON c.id = a.color_id;
+
+SELECT id, name, number, description
+FROM colors c
+RIGHT JOIN  actions a ON c.id = a.color_id;
+
+SELECT *
+FROM colors
+FULL OUTER JOIN actions a on colors.id = a.color_id

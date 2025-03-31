@@ -38,3 +38,11 @@ FROM cars c
 SELECT c.id, c.model, e.number, e.volume, e.power
 FROM cars c
 LEFT JOIN engines e ON e.car_id = c.id;
+
+SELECT id, model, number, volume, power
+FROM cars c
+RIGHT JOIN engines e ON e.car_id = c.id;
+
+SELECT *
+FROM cars c
+FULL OUTER JOIN engines e ON c.id = e.car_id

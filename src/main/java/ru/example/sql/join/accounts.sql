@@ -53,3 +53,12 @@ SELECT u.id, u.email, u.name, a.login, a.password, p.amount, p.payment_date
 FROM users u
 INNER JOIN accounts a ON a.user_id = u.id
 INNER JOIN payment p ON p.account_id = a.id;
+
+SELECT a.id, a.email, a.password, u.id, u.email, u.name
+FROM accounts a
+LEFT JOIN users u ON a.id = u.account_id
+
+
+SELECT a.id, a.email, a.password, u.id, u.email, u.name
+FROM accounts a
+RIGHT JOIN users u ON u.account_id = a.id;
