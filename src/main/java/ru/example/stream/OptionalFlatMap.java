@@ -24,4 +24,21 @@ public class OptionalFlatMap {
      return strings.stream().filter(employee -> employee.age() > 18)
                 .collect(Collectors.toMap(Employee::age, Employee::name));
     }
+
+    public static List<String> lastThree(List<String> strings) {
+    return strings.stream().skip(2).collect(Collectors.toList());
+    }
+
+/*Есть сущность книга (tittle, authorName).
+ Нужно отфильтровать список книг, у кого имя автора – Боб. И свести к списку с названиями книг.*/
+
+    public static List<String> nameAuthor(List<Book> books) {
+      return   books.stream().filter(book -> book.authorName().equals("Bob"))
+              .map(Book::tittle)
+              .collect(Collectors.toList());
+    }
+
+
+
+
 }

@@ -46,3 +46,21 @@ RIGHT JOIN engines e ON e.car_id = c.id;
 SELECT *
 FROM cars c
 FULL OUTER JOIN engines e ON c.id = e.car_id
+
+/*Выведите пассажиров с самым длинным ФИО.
+  Пробелы, дефисы и точки считаются частью имени. Таблица Passenger (id, name)*/
+
+  SELECT MAX(lenght(p.name))
+  FROM passenger p
+  Group by p.name;
+
+
+/*Вывести всех членов семьи с фамилией Quincey. Таблица FamilyMembers (id, status, name, birthday).*/
+
+SELECT *
+FROM familyMembers f
+WHERE f.name LIKE'%Quincey'
+GROUP BY f.id;
+
+
+
