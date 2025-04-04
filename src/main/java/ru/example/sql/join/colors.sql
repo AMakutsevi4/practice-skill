@@ -34,4 +34,11 @@ RIGHT JOIN  actions a ON c.id = a.color_id;
 
 SELECT *
 FROM colors
-FULL OUTER JOIN actions a on colors.id = a.color_id
+FULL OUTER JOIN actions a on colors.id = a.color_id;
+
+
+/*NATURAL JOIN – это соединение, которое создает неявное соединение на основе тех столбцов в соединяемых таблицах которые имеют одинаковые имена.*/
+SELECT *
+FROM colors c
+NATURAL JOIN actions a;
+

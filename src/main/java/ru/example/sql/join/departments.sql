@@ -38,3 +38,7 @@ SELECT e.name, d.name
 FROM employees e
 FULL JOIN departments d ON e.department_id = d.id
 WHERE d.name IS NULL;
+
+SELECT *
+FROM departments
+NATURAL JOIN employees;
