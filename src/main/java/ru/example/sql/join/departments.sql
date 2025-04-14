@@ -42,3 +42,13 @@ WHERE d.name IS NULL;
 SELECT *
 FROM departments
 NATURAL JOIN employees;
+
+
+/*
+SELF JOIN – это соединение, которое соединяет таблицу с самой собой.
+Чтобы сформировать SELF JOIN, мы указываем одну и ту же таблицу 2 раза с разными псевдонимами таблиц указываем условие объединения после ключевого слова ON.
+*/
+
+SELECT e.name, m.name
+FROM employees e
+INNER JOIN employees m ON m.e_id = e.superviser_id
