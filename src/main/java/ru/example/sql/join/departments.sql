@@ -77,3 +77,9 @@ VALUES (1, 'Petr', null),
        (6, 'Sergey', 3),
        (7, 'Alex', 3),
        (8, 'Michael', 3);
+
+
+Select e.name, m.name
+FROM employee e
+INNER JOIN employee m ON  m.employee_id = e.manager_id
+ORDER BY m.name
