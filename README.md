@@ -1,3 +1,3 @@
 # Practice Skill
 
-решение практических задач SQL и Stream API.
+Решение задач SQL и Stream API.
