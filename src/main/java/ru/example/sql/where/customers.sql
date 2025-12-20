@@ -71,3 +71,8 @@ WHERE c.first_name IN ('Ann', 'Anne', 'Annie');
 SELECT *
 FROM customers c
 WHERE c.first_name LIKE 'An%' AND length(c.first_name) BETWEEN 3 AND 5;
+
+
+SELECT *
+FROM customers c
+WHERE c.first_name LIKE '%e' AND length(c.first_name) BETWEEN 3 AND 5;
