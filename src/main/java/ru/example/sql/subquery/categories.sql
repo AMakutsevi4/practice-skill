@@ -51,3 +51,8 @@ SELECT p.id, p.name, p.quantity, p.price
 FROM products p
 LEFT JOIN categories c ON p.category_id = c.id
 WHERE c.name = 'Электроника';
+
+SELECT p.id, p.name, p.quantity, p.price
+FROM products p
+LEFT JOIN categories c ON p.category_id = c.id
+WHERE c.name = 'Спортивный костюм';
